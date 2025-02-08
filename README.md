@@ -68,3 +68,6 @@ export default function App() {
 For the Lucide icons (as specified in your components.json), install:
 
 bashCopynpm install lucide-react
+preview:
+
+![image](https://github.com/user-attachments/assets/25c5bf09-403a-4888-8e98-5d094dd5dff1) 
