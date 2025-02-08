@@ -23,3 +23,48 @@ SafeSphere plans to conduct pilot implementations, develop robust data collectio
 
 By fostering a culture of safety and collective vigilance, SafeSphere aims to empower women to make informed decisions about their travel routes, ultimately contributing to a more inclusive and secure urban environment in Delhi.
 
+I'll help you integrate the shadcn/ui components into your React project. Based on the components.json file, I can see you're using TypeScript, Tailwind CSS, and the New York style variant.
+Here are the steps to integrate the code:
+
+First, ensure you have the necessary dependencies installed:
+
+bashCopynpm install tailwindcss postcss autoprefixer
+npm install @radix-ui/react-icons
+npm install class-variance-authority
+npm install clsx
+npm install tailwind-merge
+
+Initialize Tailwind CSS if you haven't already:
+
+bashCopynpx tailwindcss init -p
+
+Create or update your tailwind.config.js with the required configuration:
+
+Create a utils.ts file in your lib directory (src/lib/utils.ts):
+
+typescriptCopyimport { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+Update your src/index.css (or global CSS file) with the base styles:
+
+Install any component-specific dependencies when you add new components. For example, if you want to use the Button component:
+
+npx shadcn-ui@latest add button
+
+You can now import and use the components in your React components:
+
+typescriptCopyimport { Button } from "@/components/ui/button"
+
+export default function App() {
+  return (
+    <Button variant="outline">Click me</Button>
+  )
+}
+
+For the Lucide icons (as specified in your components.json), install:
+
+bashCopynpm install lucide-react
