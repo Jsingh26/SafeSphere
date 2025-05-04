@@ -1,0 +1,140 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .safepath-container {
+    @apply min-h-screen bg-white p-4;
+  }
+
+  .header {
+    @apply flex items-center justify-between p-4 bg-white rounded-lg shadow-sm mb-6;
+  }
+
+  .logo {
+    @apply flex items-center gap-2;
+  }
+
+  .logo-text {
+    @apply text-2xl font-bold text-blue-600;
+  }
+
+  .nav-menu {
+    @apply flex gap-4;
+  }
+
+  .nav-item {
+    @apply px-4 py-2 rounded-md hover:bg-blue-50 transition-colors;
+  }
+
+  .map-section {
+    @apply bg-white rounded-lg shadow-sm p-4 mb-6;
+  }
+
+  .route-inputs {
+    @apply space-y-4 mb-4;
+  }
+
+  .emergency-section {
+    @apply bg-red-50 rounded-lg p-4 mb-6;
+  }
+
+  .emergency-button {
+    @apply w-full bg-red-600 text-white py-3 rounded-lg hover:bg-red-700 transition-colors font-semibold;
+  }
+
+  .safety-tips {
+    @apply bg-white rounded-lg p-4 mb-6;
+  }
+
+  .tip-item {
+    @apply flex items-center gap-2 p-2 hover:bg-gray-50 rounded-md;
+  }
+
+  .report-form {
+    @apply space-y-4 bg-white rounded-lg p-4;
+  }
+
+  .report-input {
+    @apply w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500;
+  }
+
+  .submit-button {
+    @apply w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold;
+  }
+
+  .alert {
+    @apply p-4 rounded-lg mb-4;
+  }
+
+  .alert-success {
+    @apply bg-green-50 text-green-800;
+  }
+
+  .alert-warning {
+    @apply bg-yellow-50 text-yellow-800;
+  }
+
+  .alert-danger {
+    @apply bg-red-50 text-red-800;
+  }
+
+  .info-card {
+    @apply bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow;
+  }
+
+  .status-safe {
+    @apply px-2 py-1 bg-green-100 text-green-800 rounded-full text-sm;
+  }
+
+  .status-warning {
+    @apply px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm;
+  }
+
+  .status-danger {
+    @apply px-2 py-1 bg-red-100 text-red-800 rounded-full text-sm;
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
